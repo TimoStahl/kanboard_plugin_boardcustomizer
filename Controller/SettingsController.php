@@ -10,7 +10,7 @@ class SettingsController extends BaseController
     public function showSettings()
     {
         $user = $this->getUser();
-        
+
         $options = [
             'Board: only show first column header' => 'boardcustomizer_onlyfirstcolumnheaders',
             'Board: decent hidden column' => 'boardcustomizer_optimizehiddencolumn',
@@ -20,6 +20,15 @@ class SettingsController extends BaseController
             'Card: hide task age' => 'boardcustomizer_hidetaskage',
             'Card: white background' => 'boardcustomizer_whitebackground'
         ];
+
+        // additional options is other plugin is installed
+        $pluginFGroupAssign = PLUGINS_DIR . DIRECTORY_SEPARATOR . basename('Group_assign');
+        if (file_exists($pluginFGroupAssign)) {
+            $plugin_groupassign = [
+                'Card: hide group labels' => 'boardcustomizer_groupassign_hidecardlabels'
+            ];
+            $options = array_merge($options, $plugin_groupassign);
+        }
 
         $this->response->html($this->helper->layout->user('boardcustomizer:user/settings', [
             'title' => t('Display settings'),

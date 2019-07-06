@@ -7,7 +7,7 @@ if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomize
             font-size: 13px;
             border-left-width: 2.5px !important;
             /* background-color: white!important;
-                                                background: #fff; */
+                                                    background: #fff; */
             border-radius: 3px;
             padding-left: 6px;
             padding-right: 4px;
@@ -86,11 +86,25 @@ if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomize
 <?php
 }
 if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomizer_topnavhiddenscrollbar")) {
-    /* hide task priority */
+    /* better nav bar */
     ?>
     <style>
         #select-dropdown-menu {
             overflow: auto !important;
+        }
+    </style>
+<?php
+}
+if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomizer_groupassign_hidecardlabels")) {
+    /* hide group assign labels */
+    ?>
+    <style>
+        .assigned-group-label {
+            display: none;
+        }
+
+        .assigned-other-label {
+            display: none;
         }
     </style>
 <?php

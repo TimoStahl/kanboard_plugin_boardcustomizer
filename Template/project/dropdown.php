@@ -1,3 +1,3 @@
 <li>
-    <?= $this->url->icon('cog', t('Display settings'), 'SettingsController', 'showSettings', array('plugin' => 'boardcustomizer')) ?>
+    <?= $this->url->icon('cog', t('My display settings'), 'SettingsController', 'showSettings', array('plugin' => 'boardcustomizer')) ?>
 </li>

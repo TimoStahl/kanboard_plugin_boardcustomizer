@@ -5,8 +5,6 @@ class Plugin extends Base
 {
     public function initialize()
     {
-        //$this->hook->on('template:layout:css', array('template' => 'plugins/BoardCustomizer/style.css'));
-
         $this->template->hook->attach('template:layout:head', 'boardcustomizer:layout/head');
         $this->template->hook->attach('template:project:dropdown', 'boardcustomizer:project/dropdown');        
         $this->template->hook->attach('template:user:sidebar:information', 'boardcustomizer:user/sidebar');
@@ -26,7 +24,7 @@ class Plugin extends Base
     }
     public function getPluginVersion()
     {
-        return '0.0.1';
+        return '0.1.0';
     }
     public function getPluginHomepage()
     {
