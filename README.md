@@ -1,0 +1,2 @@
+# kanboard_plugin_boardcustomizer
+Kanboard Plugin BoardCustomizer
