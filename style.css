@@ -1,59 +1,7 @@
-.task-icon-age {
-    display: none;
-}
-
-.task-priority {
-    display: none;
-}
-
 .assigned-group-label {
     display: none;
 }
 
 .assigned-other-label {
     display: none;
-}
-
-.board-column-header-task-count {
-    display: none;
-}
-
-/* This will hide all column titles on swimlanes except for the first one */
-tr[class*='board-swimlane-columns']:not(:first-child) {
-    display: none;
-}
-
-/* task card */
-.board-task-list>div {
-    font-size: 13px;
-    border-left-width: 2.5px !important;
-    /* background-color: white!important;
-    background: #fff; */
-    border-radius: 3px;
-    padding-left: 6px;
-    padding-right: 4px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    margin-bottom: 8px;
-    margin-left: 8px;
-    margin-right: 8px;
-    box-shadow: 0 1px 2px rgba(62, 54, 54, 0.55);    
-    border-right: none;
-    border-top: 1px solid #ececec;
-    border-bottom: none;
-}
-
-/* HIDE SCROLL BARS IN BOARD MENU LIST */
-#select-dropdown-menu {
-    overflow: auto !important;
-}
-
-#board th.board-column-header-collapsed {
-    width: 1rem;
-    min-width: 1rem;
-}
-
-.board-rotation-wrapper {
-    border: none !important;
-    box-shadow: none !important;
 }

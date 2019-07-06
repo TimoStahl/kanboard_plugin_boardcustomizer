@@ -20,7 +20,7 @@
                     <?php if ($this->user->userMetadataModel->exists($user['id'], $key)) : ?>
                         <?= $this->url->icon('toggle-off', t('Disable'), 'SettingsController', 'disable', array('plugin' => 'boardcustomizer', 'key' => $key), true) ?>
                     <?php else : ?>
-                        <?= $this->url->icon('toggle-off', t('Enable'), 'SettingsController', 'enable', array('plugin' => 'boardcustomizer', 'key' => $key), true) ?>
+                        <?= $this->url->icon('toggle-on', t('Enable'), 'SettingsController', 'enable', array('plugin' => 'boardcustomizer', 'key' => $key), true) ?>
                     <?php endif ?>
                 </td>
             </tr>

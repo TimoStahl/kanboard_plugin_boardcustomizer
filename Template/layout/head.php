@@ -1,5 +1,5 @@
 <?php
-if ($this->user->userMetadataModel->exists(1, "boardcustomizer_materialcard")) {
+if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomizer_materialcard")) {
     /* change overall card layout and shadow */
     ?>
     <style>
@@ -7,7 +7,7 @@ if ($this->user->userMetadataModel->exists(1, "boardcustomizer_materialcard")) {
             font-size: 13px;
             border-left-width: 2.5px !important;
             /* background-color: white!important;
-                    background: #fff; */
+                                                background: #fff; */
             border-radius: 3px;
             padding-left: 6px;
             padding-right: 4px;
@@ -24,12 +24,73 @@ if ($this->user->userMetadataModel->exists(1, "boardcustomizer_materialcard")) {
     </style>
 <?php
 }
-if ($this->user->userMetadataModel->exists(1, "boardcustomizer_onlyfirstcolumnheaders")) {
+if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomizer_onlyfirstcolumnheaders")) {
     /* This will hide all column titles on swimlanes except for the first one */
     ?>
     <style>
         tr[class*='board-swimlane-columns']:not(:first-child) {
             display: none;
+        }
+
+        .board-column-header-task-count {
+            display: none;
+        }
+    </style>
+<?php
+}
+if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomizer_hidetaskage")) {
+    /* hide task age */
+    ?>
+    <style>
+        .task-icon-age {
+            display: none;
+        }
+    </style>
+<?php
+}
+if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomizer_hidetaskpriority")) {
+    /* hide task priority */
+    ?>
+    <style>
+        .task-priority {
+            display: none;
+        }
+    </style>
+<?php
+}
+if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomizer_whitebackground")) {
+    /* hide task priority */
+    ?>
+    <style>
+        .board-task-list>div {
+            background-color: white !important;
+            background: #fff;
+        }
+    </style>
+<?php
+}
+if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomizer_optimizehiddencolumn")) {
+    /* hide task priority */
+    ?>
+    <style>
+        #board th.board-column-header-collapsed {
+            width: 1rem;
+            min-width: 1rem;
+        }
+
+        .board-rotation-wrapper {
+            border: none !important;
+            box-shadow: none !important;
+        }
+    </style>
+<?php
+}
+if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomizer_topnavhiddenscrollbar")) {
+    /* hide task priority */
+    ?>
+    <style>
+        #select-dropdown-menu {
+            overflow: auto !important;
         }
     </style>
 <?php

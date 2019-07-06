@@ -4,22 +4,21 @@ namespace Kanboard\Plugin\BoardCustomizer\Controller;
 
 use Kanboard\Controller\BaseController;
 
-/**
- * Project Analytic Controller
- *
- * @package  Kanboard\Controller
- * @author   Frederic Guillot
- */
 class SettingsController extends BaseController
 {
 
     public function showSettings()
     {
         $user = $this->getUser();
-        //$metadata = $this->userMetadataModel->getAll($user['id']);
+        
         $options = [
-            'Material Card' => 'boardcustomizer_materialcard',
-            'Only show one column header' => 'boardcustomizer_onlyfirstcolumnheaders'
+            'Board: only show first column header' => 'boardcustomizer_onlyfirstcolumnheaders',
+            'Board: decent hidden column' => 'boardcustomizer_optimizehiddencolumn',
+            'Board: top selection without scollbar' => 'boardcustomizer_topnavhiddenscrollbar',
+            'Card: material design' => 'boardcustomizer_materialcard',
+            'Card: hide task priority' => 'boardcustomizer_hidetaskpriority',
+            'Card: hide task age' => 'boardcustomizer_hidetaskage',
+            'Card: white background' => 'boardcustomizer_whitebackground'
         ];
 
         $this->response->html($this->helper->layout->user('boardcustomizer:user/settings', [
