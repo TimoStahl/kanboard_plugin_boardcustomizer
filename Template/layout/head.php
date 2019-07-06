@@ -6,8 +6,6 @@ if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomize
         .board-task-list>div {
             font-size: 13px;
             border-left-width: 2.5px !important;
-            /* background-color: white!important;
-                                                    background: #fff; */
             border-radius: 3px;
             padding-left: 6px;
             padding-right: 4px;
@@ -74,13 +72,15 @@ if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomize
     ?>
     <style>
         #board th.board-column-header-collapsed {
-            width: 1rem;
-            min-width: 1rem;
+            width: 5px;
+            min-width: 5px;
         }
 
         .board-rotation-wrapper {
             border: none !important;
             box-shadow: none !important;
+            margin: 0px !important;
+            padding: 0px !important;
         }
     </style>
 <?php
