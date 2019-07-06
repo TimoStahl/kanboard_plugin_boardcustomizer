@@ -1,0 +1,27 @@
+.task-icon-age {
+    display: none;
+}
+
+
+.task-priority {
+    display: none;
+}
+
+
+.assigned-group-label {
+    display: none;
+}
+
+.assigned-other-label {
+    display: none;
+}
+
+.board-column-header-task-count {
+    display: none;
+
+}
+
+/* This will hide all column titles on swimlanes except for the first one */
+tr[class*='board-swimlane-columns']:not(:first-child) {
+    display: none;
+}
