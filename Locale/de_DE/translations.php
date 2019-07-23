@@ -9,5 +9,6 @@ return array(
     'Card: hide task priority' => 'Karte: Aufgabenpriorität ausblenden',
     'Card: hide task age' => 'Karte: Alter der Aufgabe ausblenden',
     'Card: white background' => 'Karte: weißer Hintergrund',
-    'Card: hide group labels' => 'Karte: Gruppenbeschriftungen ausblenden'
+    'Card: hide group labels' => 'Karte: Gruppenbeschriftungen ausblenden',
+    'Customize board and card style' => 'Anpassen von Pinnwand- und Kartenstilen'
 );

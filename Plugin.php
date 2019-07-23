@@ -19,7 +19,7 @@ class Plugin extends Base
     }
     public function getPluginName()
     {
-        return 'BoardCustomizer';
+        return 'Boardcustomizer';
     }
     public function getPluginDescription()
     {
