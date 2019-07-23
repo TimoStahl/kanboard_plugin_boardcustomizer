@@ -1,5 +1,5 @@
-plugin=BoardCustomizer
-version=0.1.0
+plugin=Boardcustomizer
+version=0.1.1
 
 all:
 	@ echo "Build archive for plugin ${plugin} version=${version}"
