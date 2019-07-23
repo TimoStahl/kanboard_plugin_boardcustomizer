@@ -1,14 +1,21 @@
 <?php
+
 namespace Kanboard\Plugin\BoardCustomizer;
+
 use Kanboard\Core\Plugin\Base;
+use Kanboard\Core\Translator;
+
 class Plugin extends Base
 {
     public function initialize()
     {
         $this->template->hook->attach('template:layout:head', 'boardcustomizer:layout/head');
-        $this->template->hook->attach('template:project:dropdown', 'boardcustomizer:project/dropdown');        
+        $this->template->hook->attach('template:project:dropdown', 'boardcustomizer:project/dropdown');
         $this->template->hook->attach('template:user:sidebar:information', 'boardcustomizer:user/sidebar');
-
+    }
+    public function onStartup()
+    {
+        Translator::load($this->languageModel->getCurrentLanguage(), __DIR__ . '/Locale');
     }
     public function getPluginName()
     {

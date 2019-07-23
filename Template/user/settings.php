@@ -1,5 +1,5 @@
 <div class="page-header">
-    <h2><?= t('Display settings') ?></h2>
+    <h2><?= t('My display settings') ?></h2>
 </div>
 
 
