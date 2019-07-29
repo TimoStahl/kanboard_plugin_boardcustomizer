@@ -13,7 +13,6 @@ class SettingsController extends BaseController
 
         $options = [
             t('Board: only show first column header') => 'boardcustomizer_onlyfirstcolumnheaders',
-            t('Board: decent hidden column') => 'boardcustomizer_optimizehiddencolumn',
             t('Board: top selection without scollbar') => 'boardcustomizer_topnavhiddenscrollbar',
             t('Card: material design') => 'boardcustomizer_materialcard',
             t('Card: hide task priority') => 'boardcustomizer_hidetaskpriority',

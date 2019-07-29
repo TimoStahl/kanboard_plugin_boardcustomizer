@@ -67,24 +67,6 @@ if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomize
     </style>
 <?php
 }
-if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomizer_optimizehiddencolumn")) {
-    /* hide task priority */
-    ?>
-    <style>
-        #board th.board-column-header-collapsed {
-            width: 5px;
-            min-width: 5px;
-        }
-
-        .board-rotation-wrapper {
-            border: none !important;
-            box-shadow: none !important;
-            margin: 0px !important;
-            padding: 0px !important;
-        }
-    </style>
-<?php
-}
 if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomizer_topnavhiddenscrollbar")) {
     /* better nav bar */
     ?>
