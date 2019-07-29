@@ -16,6 +16,8 @@ Plugin for https://github.com/kanboard/kanboard
 - hide task priority
 - hide task age
 - white background
+- hide owner name
+- hide category
 - hide group labels (if [Group Assign](https://github.com/creecros/group_assign) Plugin is installed)
 
 Further options and pull requests are welcome.

@@ -101,3 +101,13 @@ if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomize
     </style>
 <?php
 }
+if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomizer_hidecategory")) {
+    /* hide category text */
+    ?>
+    <style>
+        .task-board-category-container {
+            display: none;
+        }
+    </style>
+<?php
+}

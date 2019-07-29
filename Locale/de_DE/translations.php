@@ -10,5 +10,6 @@ return array(
     'Card: white background' => 'Karte: weißer Hintergrund',
     'Card: hide group labels' => 'Karte: Gruppenbeschriftungen ausblenden',
     'Customize board and card style' => 'Anpassen von Pinnwand- und Kartenstilen',
-    'Card: hide owner name' => 'Karte: Name Zuständiger ausblenden'
+    'Card: hide owner name' => 'Karte: Name Zuständiger ausblenden',
+    'Card: hide category' => 'Karte: Kategorie ausblenden'
 );

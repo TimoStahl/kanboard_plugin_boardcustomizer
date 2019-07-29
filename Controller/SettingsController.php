@@ -18,7 +18,8 @@ class SettingsController extends BaseController
             t('Card: hide task priority') => 'boardcustomizer_hidetaskpriority',
             t('Card: hide task age') => 'boardcustomizer_hidetaskage',
             t('Card: white background') => 'boardcustomizer_whitebackground',
-            t('Card: hide owner name') => 'boardcustomizer_hideownername'
+            t('Card: hide owner name') => 'boardcustomizer_hideownername',
+            t('Card: hide category') => 'boardcustomizer_hidecategory'
         ];
 
         // additional options is other plugin is installed
