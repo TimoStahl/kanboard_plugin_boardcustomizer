@@ -18,6 +18,7 @@ Plugin for https://github.com/kanboard/kanboard
 - white background
 - hide owner name
 - hide category
+- hide tags
 - hide group labels (if [Group Assign](https://github.com/creecros/group_assign) Plugin is installed)
 
 Further options and pull requests are welcome.

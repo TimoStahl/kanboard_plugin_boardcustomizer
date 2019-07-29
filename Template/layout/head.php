@@ -102,10 +102,20 @@ if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomize
 <?php
 }
 if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomizer_hidecategory")) {
-    /* hide category text */
+    /* hide category */
     ?>
     <style>
         .task-board-category-container {
+            display: none;
+        }
+    </style>
+<?php
+}
+if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomizer_hidetags")) {
+    /* hide tags */
+    ?>
+    <style>
+        .task-tags {
             display: none;
         }
     </style>

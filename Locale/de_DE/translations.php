@@ -11,5 +11,6 @@ return array(
     'Card: hide group labels' => 'Karte: Gruppenbeschriftungen ausblenden',
     'Customize board and card style' => 'Anpassen von Pinnwand- und Kartenstilen',
     'Card: hide owner name' => 'Karte: Name Zuständiger ausblenden',
-    'Card: hide category' => 'Karte: Kategorie ausblenden'
+    'Card: hide category' => 'Karte: Kategorie ausblenden',
+    'Card: hide tags' => 'Karte: Schlagworte ausblenden'
 );
