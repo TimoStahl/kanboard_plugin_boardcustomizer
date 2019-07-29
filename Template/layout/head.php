@@ -91,3 +91,13 @@ if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomize
     </style>
 <?php
 }
+if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomizer_hideownername")) {
+    /* hide owner text */
+    ?>
+    <style>
+        div.task-board-header > .task-board-assignee {
+            display: none;
+        }
+    </style>
+<?php
+}

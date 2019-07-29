@@ -9,7 +9,6 @@ Plugin for https://github.com/kanboard/kanboard
 
 ### Board
 - only show first column header
-- decent hidden column
 - top selection without scollbar
 
 ### Card
@@ -40,5 +39,5 @@ No additional tables are needed, metadata storage of the user is used.
 
 or
 
-- Create a folder **plugins/BoardCustomizer**
+- Create a folder **plugins/Boardcustomizer**
 - Copy all files under this directory
