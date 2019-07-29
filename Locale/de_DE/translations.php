@@ -12,5 +12,10 @@ return array(
     'Customize board and card style' => 'Anpassen von Pinnwand- und Kartenstilen',
     'Card: hide owner name' => 'Karte: Name Zuständiger ausblenden',
     'Card: hide category' => 'Karte: Kategorie ausblenden',
-    'Card: hide tags' => 'Karte: Schlagworte ausblenden'
+    'Card: hide tags' => 'Karte: Schlagworte ausblenden',
+    'Card: hide all footer icons' => 'Karte: alle Icons ausblenden',
+    'Card: hide reference' => 'Karte: Referenz ausblenden',
+    'Card: hide score' => 'Karte: Komplexität ausblenden',
+    'Card: hide time estimated' => 'Karte: geschätzte Zeit ausblenden',
+    'Card: hide task date' => 'Karte: Datum ausblenden',
 );

@@ -19,6 +19,11 @@ Plugin for https://github.com/kanboard/kanboard
 - hide owner name
 - hide category
 - hide tags
+- hide whole footer
+- hide reference
+- hide score
+- hide time estimated
+- hide task date
 - hide group labels (if [Group Assign](https://github.com/creecros/group_assign) Plugin is installed)
 
 Further options and pull requests are welcome.

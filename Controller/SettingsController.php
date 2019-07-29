@@ -15,12 +15,17 @@ class SettingsController extends BaseController
             t('Board: only show first column header') => 'boardcustomizer_onlyfirstcolumnheaders',
             t('Board: top selection without scollbar') => 'boardcustomizer_topnavhiddenscrollbar',
             t('Card: material design') => 'boardcustomizer_materialcard',
-            t('Card: hide task priority') => 'boardcustomizer_hidetaskpriority',
-            t('Card: hide task age') => 'boardcustomizer_hidetaskage',
             t('Card: white background') => 'boardcustomizer_whitebackground',
             t('Card: hide owner name') => 'boardcustomizer_hideownername',
             t('Card: hide category') => 'boardcustomizer_hidecategory',
-            t('Card: hide tags') => 'boardcustomizer_hidetags'
+            t('Card: hide tags') => 'boardcustomizer_hidetags',
+            t('Card: hide all footer icons') => 'boardcustomizer_hidefooter',
+            t('Card: hide task priority') => 'boardcustomizer_hidetaskpriority',
+            t('Card: hide task age') => 'boardcustomizer_hidetaskage',
+            t('Card: hide reference') => 'boardcustomizer_hidereference',
+            t('Card: hide score') => 'boardcustomizer_hidescore',
+            t('Card: hide time estimated') => 'boardcustomizer_hidetimeestimated',
+            t('Card: hide task date') => 'boardcustomizer_hidetaskdate'
         ];
 
         // additional options is other plugin is installed

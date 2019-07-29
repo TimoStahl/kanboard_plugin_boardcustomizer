@@ -57,7 +57,7 @@ if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomize
 <?php
 }
 if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomizer_whitebackground")) {
-    /* hide task priority */
+    /* task white background */
     ?>
     <style>
         .board-task-list>div {
@@ -116,6 +116,56 @@ if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomize
     ?>
     <style>
         .task-tags {
+            display: none;
+        }
+    </style>
+<?php
+}
+if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomizer_hidefooter")) {
+    /* hide whole footer */
+    ?>
+    <style>
+        .task-board-icons {
+            display: none;
+        }
+    </style>
+<?php
+}
+if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomizer_hidereference")) {
+    /* hide reference */
+    ?>
+    <style>
+        .task-board-reference {
+            display: none;
+        }
+    </style>
+<?php
+}
+if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomizer_hidescore")) {
+    /* hide score */
+    ?>
+    <style>
+        .task-score {
+            display: none;
+        }
+    </style>
+<?php
+}
+if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomizer_hidetimeestimated")) {
+    /* hide time estimated */
+    ?>
+    <style>
+        .task-time-estimated {
+            display: none;
+        }
+    </style>
+<?php
+}
+if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomizer_hidetaskdate")) {
+    /* hide task date */
+    ?>
+    <style>
+        .task-date {
             display: none;
         }
     </style>
