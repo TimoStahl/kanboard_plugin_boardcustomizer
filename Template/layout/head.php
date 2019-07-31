@@ -3,7 +3,7 @@ if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomize
     /* change overall card layout and shadow */
     ?>
     <style>
-        .board-task-list>div {
+        .board-task-list>div.task-board {
             font-size: 13px;
             border-left-width: 2.5px !important;
             border-radius: 3px;
