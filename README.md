@@ -30,6 +30,8 @@ Further options and pull requests are welcome.
 
 ## Screenshots
 
+To use the plugin after installation, go to "My Profile" and select "My display settings".
+
 ![Screenshot 1](https://user-images.githubusercontent.com/1961634/60758678-45135700-a01a-11e9-9c9d-23290daaddb7.png)
 
 ![Screenshot 2](https://user-images.githubusercontent.com/1961634/60758686-6f651480-a01a-11e9-8bb0-0afb13ba9a6e.png)
