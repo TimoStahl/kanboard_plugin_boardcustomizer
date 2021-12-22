@@ -26,8 +26,31 @@ if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomize
     /* compact layout */
     ?>
     <style>
+        small {padding:0px 6px 0px 6px !important}
+        header {padding:5px 5px !important;margin-bottom: 9px !important}
+        #to-top {margin: 0px 0px 9px 0px !important}
         .assigned-group-label {display:none}
         .assigned-other-label {display:none}
+        .task-board-avatars-inner {float:right;display:flex;justify-content:center}
+        .task-board-avatars-outer {float:right}
+        .task-board-icons-top {float:left;position:relative;margin-right:3px}
+        .task-board-icons-abs-topright {position:absolute;top:0px;right:0px;white-space:nowrap}
+        .task-board-title {margin-bottom:0px}
+        .task-board {padding-right:0px !important;padding-bottom:1px !important;padding-left:3px !important;padding-top:3px !important;font-weight:600}
+        .title-container {display:flex;align-items:center}
+        .code {background:#272822 !important;padding: 3px 6px 3px 6px;color:#fff !important}
+        .task-board-title {margin-bottom:1px !important}
+        .margin-top {margin-top:9px !important}
+        .margin-bottom {margin-bottom:9px !important}
+        .table-list {margin-left: 9px;margin-bottom: 9px !important}
+        .btnbox {position:relative;min-height:25px;display:flex;flex-flow:row nowrap;align-items:center}
+        .btn {min-height:inherit;display:flex !important;align-items: center;padding: 3px 3px 3px 5px !important}
+        .bbprojectcollapse {padding: 5px 9px 1px 9px !important}
+        .board-column-title {padding: 0px 9px 0px 3px}
+        .board-column-header {padding: 3px 5px 0px 5px !important}
+        .views-switcher-component {padding: 2px 0px 4px 0px}
+        .sidebar {min-width:170px !important}
+        .sidebar-content {max-width:90% !important}
     </style>
 <?php
 }
