@@ -2,10 +2,30 @@
 
 namespace Kanboard\Plugin\BoardCustomizer\Controller;
 
+use Kanboard\Model\ConfigModel;
+use Kanboard\Model\LanguageModel;
 use Kanboard\Controller\BaseController;
 
 class SettingsController extends BaseController
 {
+
+    public function save() {
+        if (isset($_POST['b_av_size'])) {
+            $values = $this->request->getValues();
+            $this->configModel->save(['b_av_size' => $_POST['b_av_size']]);
+            $this->configModel->save(['b_av_radius' => $_POST['b_av_radius']]);
+            $this->configModel->save(['av_size' => $_POST['b_av_size']]);
+            $this->configModel->save(['av_radius' => $_POST['b_av_radius']]);
+        }
+        $values = $this->request->getValues();
+        $this->languageModel->loadCurrentLanguage();
+        if ($this->configModel->save($values)) {
+            $this->flash->success(t('Settings saved successfully.'));
+        } else {
+            $this->flash->failure(t('Unable to save your settings.'));
+        }
+        $this->response->redirect($this->helper->url->to('SettingsController', 'showSettings', array('plugin' => 'Boardcustomizer')));
+    }
 
     public function showSettings()
     {
@@ -25,7 +45,9 @@ class SettingsController extends BaseController
             t('Card: hide reference') => 'boardcustomizer_hidereference',
             t('Card: hide score') => 'boardcustomizer_hidescore',
             t('Card: hide time estimated') => 'boardcustomizer_hidetimeestimated',
-            t('Card: hide task date') => 'boardcustomizer_hidetaskdate'
+            t('Card: hide task date') => 'boardcustomizer_hidetaskdate',
+            t('Avatar size and Radius') => 'boardcustomizer_avatardyn',
+            t('Compact Layout') => 'boardcustomizer_compactlayout'
         ];
 
         // additional options is other plugin is installed
@@ -48,6 +70,9 @@ class SettingsController extends BaseController
     {
         $user = $this->getUser();
         $key = $this->request->getStringParam('key');
+        if ($key == 'boardcustomizer_compactlayout') {
+            $this->configModel->save(['boardcustomizer_compactlayout' => 'disable']);
+        }
         $this->userMetadataModel->remove($user['id'], $key);
         return $this->response->redirect($this->helper->url->to('SettingsController', 'showSettings', ['plugin' => 'boardcustomizer']), true);
     }
@@ -56,6 +81,9 @@ class SettingsController extends BaseController
     {
         $user = $this->getUser();
         $key = $this->request->getStringParam('key');
+        if ($key == 'boardcustomizer_compactlayout') {
+            $this->configModel->save(['boardcustomizer_compactlayout' => 'enable']);
+        }
         $this->userMetadataModel->save($user['id'], [$key => true]);
         return $this->response->redirect($this->helper->url->to('SettingsController', 'showSettings', ['plugin' => 'boardcustomizer']), true);
     }
