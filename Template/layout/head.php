@@ -43,7 +43,7 @@ if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomize
         .table-list {margin-left: 9px;margin-bottom: 9px !important}
         .margin-top {margin-top:9px !important}
         .margin-bottom {margin-bottom:9px !important}
-        .views-switcher-component {padding: 2px 0px 4px 0px}
+        .views-switcher-component {padding: 2px 0px 4px 1px}
         .bbprojectcollapse {padding: 5px 9px 1px 9px !important}
         .board-column-title {padding: 0px 9px 0px 3px}
         .board-column-header {padding: 3px 5px 0px 5px !important}
