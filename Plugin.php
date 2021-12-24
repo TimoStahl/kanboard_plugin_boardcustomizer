@@ -16,6 +16,9 @@ class Plugin extends Base
         $this->helper->register('dynamicAvatar', '\Kanboard\Plugin\Boardcustomizer\Helper\DynamicAvatar');
         $this->template->setTemplateOverride('header/user_dropdown', 'boardcustomizer:header/user_dropdown');
         $this->template->setTemplateOverride('board/task_avatar', 'boardcustomizer:board/task_avatar');
+        $this->template->setTemplateOverride('board/task_private', 'boardcustomizer:board/task_private');
+        $this->template->setTemplateOverride('board/task_public', 'boardcustomizer:board/task_public');
+
     }
     public function onStartup()
     {
