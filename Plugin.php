@@ -12,6 +12,13 @@ class Plugin extends Base
         $this->template->hook->attach('template:layout:head', 'boardcustomizer:layout/head');
         $this->template->hook->attach('template:project:dropdown', 'boardcustomizer:project/dropdown');
         $this->template->hook->attach('template:user:sidebar:information', 'boardcustomizer:user/sidebar');
+
+        $this->helper->register('dynamicAvatar', '\Kanboard\Plugin\Boardcustomizer\Helper\DynamicAvatar');
+        $this->template->setTemplateOverride('header/user_dropdown', 'boardcustomizer:header/user_dropdown');
+        $this->template->setTemplateOverride('board/task_avatar', 'boardcustomizer:board/task_avatar');
+        $this->template->setTemplateOverride('board/task_private', 'boardcustomizer:board/task_private');
+        $this->template->setTemplateOverride('board/task_public', 'boardcustomizer:board/task_public');
+
     }
     public function onStartup()
     {
@@ -27,11 +34,11 @@ class Plugin extends Base
     }
     public function getPluginAuthor()
     {
-        return 'BlueTeck';
+        return 'BlueTeck, Craig Crosby, Jake G';
     }
     public function getPluginVersion()
     {
-        return '1.0.1';
+        return '1.1.0';
     }
     public function getPluginHomepage()
     {

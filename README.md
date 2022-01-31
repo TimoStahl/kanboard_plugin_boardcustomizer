@@ -39,6 +39,8 @@ To use the plugin after installation, go to "My Profile" and select "My display 
 ## Author
 
 - [BlueTeck](https://github.com/BlueTeck)
+- [Craig Crosby](https://github.com/creecros)
+- [Jake G](https://github.com/jieiku)
 - License MIT
 
 ## Installation
