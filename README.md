@@ -2,6 +2,8 @@
 
 Customize board and card style per user.
 
+This software is in maintenance mode. It doesn't mean it's abandoned, but there is no significant feature development. Pull-requests are still accepted as long as the guidelines are followed.
+
 Plugin for https://github.com/kanboard/kanboard
 
 
