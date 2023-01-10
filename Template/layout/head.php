@@ -89,6 +89,16 @@ if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomize
     </style>
 <?php
 }
+if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomizer_metamagik_hide_icon_count")) {
+    /* hide MetaMagiK icon and counter */
+    ?>
+    <style>
+        .metamagik-icon-count {
+            display: none;
+        }
+    </style>
+<?php
+}
 if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomizer_whitebackground")) {
     /* task white background */
     ?>

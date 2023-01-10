@@ -59,6 +59,15 @@ class SettingsController extends BaseController
             $options = array_merge($options, $plugin_groupassign);
         }
 
+        // Check if MetaMagik PlugIn is available, if so show option to deaktivate icon and count display
+        $pluginFMetaMagik = PLUGINS_DIR . DIRECTORY_SEPARATOR . basename('MetaMagik');
+        if (file_exists($pluginFMetaMagik)) {
+            $plugin_metamagik = [
+                t('Card: hide metamagik infos') => 'boardcustomizer_metamagik_hide_icon_count'
+            ];
+            $options = array_merge($options, $plugin_metamagik);
+        }        
+
         $this->response->html($this->helper->layout->user('boardcustomizer:user/settings', [
             'title'   => t('My display settings'),
             'user'    => $user,
