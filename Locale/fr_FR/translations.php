@@ -18,4 +18,5 @@ return array(
     'Card: hide score' => 'Carte : Masquer la complexité',
     'Card: hide time estimated' => 'Carte : Masquer le temps estimé',
     'Card: hide task date' => 'Carte : Masquer la date d\'échance',
+    'Card: hide metamagik infos' => 'Carte : Cacher les infos sur la MetaMagik',
 );
