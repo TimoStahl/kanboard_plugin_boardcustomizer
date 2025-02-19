@@ -13,7 +13,7 @@ use Kanboard\Core\Base;
 class DynamicAvatar extends AvatarHelper
 {
 
-    public function dynamicRender($user_id, $username, $name, $email, $avatar_path, $css = 'avatar-left', $size = 48)
+    public function dynamicRender($user_id, $username, $name, $email, $avatar_path, $size = 48, $css = 'avatar-left')
     {
         if (empty($user_id) && empty($username)) {
             $html = $this->avatarManager->renderDefault($size);
@@ -23,18 +23,18 @@ class DynamicAvatar extends AvatarHelper
         return '<div id="'.$css.'" class="avatar avatar-dyn '.$css.'">'.$html.'</div>';
     }
 
-    public function dynamic($user_id, $username, $name, $email, $avatar_path, $css = '', $size)
+    public function dynamic($user_id, $username, $name, $email, $avatar_path, $size, $css = '')
     {
-        return $this->dynamicRender($user_id, $username, $name, $email, $avatar_path, $css, $size);
+        return $this->dynamicRender($user_id, $username, $name, $email, $avatar_path, $size, $css);
     }
 
     public function currentUserDynamic($css = '')
     {
         $user = $this->userSession->getAll();
-        return $this->dynamic($user['id'], $user['username'], $user['name'], $user['email'], $user['avatar_path'], $css, $this->configModel->get('av_size', '20'));
+        return $this->dynamic($user['id'], $user['username'], $user['name'], $user['email'], $user['avatar_path'], $this->configModel->get('av_size', '20'), $css);
     }
 
-    public function boardDynamicRender($user_id, $username, $name, $email, $avatar_path, $css = 'avatar-left', $size = 48)
+    public function boardDynamicRender($user_id, $username, $name, $email, $avatar_path, $size = 48, $css = 'avatar-left')
     {
         if (empty($user_id) && empty($username)) {
             $html = $this->avatarManager->renderDefault($size);
@@ -44,20 +44,15 @@ class DynamicAvatar extends AvatarHelper
         return '<div id="'.$css.'" class="avatar avatar-bdyn '.$css.'">'.$html.'</div>';
     }
 
-    public function boardDynamic($user_id, $username, $name, $email, $avatar_path, $css = '', $size)
+    public function boardDynamic($user_id, $username, $name, $email, $avatar_path, $size, $css = '')
     {
-        return $this->boardDynamicRender($user_id, $username, $name, $email, $avatar_path, $css, $size);
+        return $this->boardDynamicRender($user_id, $username, $name, $email, $avatar_path, $size, $css);
     }
 
     public function boardCurrentUserDynamic($css = '')
     {
         $user = $this->userSession->getAll();
-        return $this->boardDynamic($user['id'], $user['username'], $user['name'], $user['email'], $user['avatar_path'], $css, $this->configModel->get('b_av_size', '20'));
-    }
-
-    public function getUser()
-    {
-        return $this->userSession->getAll();
+        return $this->boardDynamic($user['id'], $user['username'], $user['name'], $user['email'], $user['avatar_path'], $this->configModel->get('b_av_size', '20'), $css);
     }
 
  }
