@@ -23,7 +23,7 @@ class DynamicAvatar extends AvatarHelper
         return '<div id="'.$css.'" class="avatar avatar-dyn '.$css.'">'.$html.'</div>';
     }
 
-    public function dynamic($user_id, $username, $name, $email, $avatar_path, $size, $css = '')
+    public function dynamic($user_id, $username, $name, $email, $avatar_path, $size, $css)
     {
         return $this->dynamicRender($user_id, $username, $name, $email, $avatar_path, $size, $css);
     }
@@ -44,7 +44,7 @@ class DynamicAvatar extends AvatarHelper
         return '<div id="'.$css.'" class="avatar avatar-bdyn '.$css.'">'.$html.'</div>';
     }
 
-    public function boardDynamic($user_id, $username, $name, $email, $avatar_path, $size, $css = '')
+    public function boardDynamic($user_id, $username, $name, $email, $avatar_path, $size, $css)
     {
         return $this->boardDynamicRender($user_id, $username, $name, $email, $avatar_path, $size, $css);
     }
