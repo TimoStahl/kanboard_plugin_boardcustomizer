@@ -62,9 +62,14 @@ if ($this->user->userMetadataModel->exists($this->user->getid(), "boardcustomize
         tr[class*='board-swimlane-columns']:not(:first-child) {
             display: none;
         }
-
-        .board-column-header-task-count {
-            display: none;
+        .board-column-task-collapsed {
+             visibility: hidden;
+         }
+        .board-swimlane-columns-first+tr+tr[class*="board-swimlane-columns"]{
+            display: table-row;
+        }
+        .board-swimlane-columns-first+tr+tr[class*="board-swimlane-columns"]+tr .board-column-task-collapsed{
+            visibility: initial;
         }
     </style>
 <?php
