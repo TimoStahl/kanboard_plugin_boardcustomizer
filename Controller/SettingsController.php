@@ -1,6 +1,6 @@
 <?php
 
-namespace Kanboard\Plugin\BoardCustomizer\Controller;
+namespace Kanboard\Plugin\Boardcustomizer\Controller;
 
 use Kanboard\Model\ConfigModel;
 use Kanboard\Model\LanguageModel;

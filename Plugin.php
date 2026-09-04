@@ -1,6 +1,6 @@
 <?php
 
-namespace Kanboard\Plugin\BoardCustomizer;
+namespace Kanboard\Plugin\Boardcustomizer;
 
 use Kanboard\Core\Plugin\Base;
 use Kanboard\Core\Translator;
